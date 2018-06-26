@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from "../pages/login/login";
 import { ModificarPerfilPage } from "../pages/modificar-perfil/modificar-perfil";
 import { RegistroPage } from "../pages/registro/registro";
+import { Registro2Page } from "../pages/registro2/registro2";
 //googlemaps
 import { AgmCoreModule } from '@agm/core';
 
@@ -27,7 +28,8 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     HomePage,
     LoginPage,
     ModificarPerfilPage,
-    RegistroPage
+    RegistroPage,
+    Registro2Page
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     HomePage,
     LoginPage,
     ModificarPerfilPage,
-    RegistroPage
+    RegistroPage,
+    Registro2Page
   ],
   providers: [
     StatusBar,
