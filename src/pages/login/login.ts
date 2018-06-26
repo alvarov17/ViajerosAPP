@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from "../home/home";
 import { UsuarioProvider } from "../../providers/usuario/usuario";
-
+import { RegistroPage } from "../registro/registro";
 /**
  * Generated class for the LoginPage page.
  *
@@ -28,6 +28,11 @@ export class LoginPage {
     //this.usuProv.getUsuario();
     this.navCtrl.setRoot(HomePage);
 
+  }
+
+  abrirRegistro(){
+
+    this.navCtrl.push(RegistroPage);
   }
 
 }
