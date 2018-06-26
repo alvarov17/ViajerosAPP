@@ -1,14 +1,57 @@
+
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+
+  <ion-toolbar>
+
+    <ion-buttons>
+      <button ion-button icon-only menuToggle><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="abrirModificarPerfil()"><ion-icon name="settings"></ion-icon></button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="14">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+
 </ion-content>
+
+
+<ion-menu [content]="mycontent">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col><img src="../../assets/imgs/avatar.png" width="50px" icon-left=""></ion-col>
+          <ion-col><h3>Alvaro Valenzuela</h3></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item>
+        Historial de compras
+      </button>
+      <button ion-item>
+        Opciones de pago
+      </button>
+      <button ion-item>
+        Compartir
+      </button>
+      <button ion-item>
+        Ayuda
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
