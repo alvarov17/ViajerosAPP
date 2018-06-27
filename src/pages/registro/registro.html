@@ -10,26 +10,64 @@
 
 <ion-content padding>
 
-  <ion-list>
-<h3> ¿ Cómo te llamas ?</h3>
-  <ion-item>
-    <ion-label floating>Nombre</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
+    <ion-slides pager>
 
-  <ion-item>
-    <ion-label floating>Apellido</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
+        <ion-slide>
+            <ion-list>
+                <h3> ¿ Cómo te llamas ?</h3>
+                  <ion-item>
+                    <ion-label floating>Nombre</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
 
-<h3 floating>¿ Cuál es tu rut? </h3>
+                  <ion-item>
+                    <ion-label floating>Apellido</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
 
-  <ion-item>
-    <ion-label floating>xx.xxx.xxx-x</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
+                <h3 floating>¿ Cuál es tu rut? </h3>
 
-<button ion-button block (click)="siguienteRegistro()">Siguiente</button>
-</ion-list>
+                  <ion-item>
+                    <ion-label floating>xx.xxx.xxx-x</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+
+               <!-- <button ion-button block>Siguiente</button> -->
+                </ion-list>
+        </ion-slide>
+
+        <ion-slide>
+            <ion-list>
+                <h6> ¿ Cuál es tu numero de teléfono ?</h6>
+                  <ion-item>
+                    <ion-label floating>Nombre</ion-label>
+                    <ion-input type="number"></ion-input>
+                  </ion-item>
+
+                <h6> ¿ Cuál es tu E-mail ?</h6>
+
+                  <ion-item>
+                    <ion-label floating>E-mail</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+
+                <h6> ¿ Cuál es tu dirección de hogar ?</h6>
+
+                  <ion-item>
+                    <ion-label floating>Ej: Pasaje Los Damascos 064, Santiago, Chile</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+
+                <button ion-button block (click)="siguienteRegistro()">Siguiente</button>
+                </ion-list>
+        </ion-slide>
+
+        <ion-slide>
+          <h2>Slide 3</h2>
+        </ion-slide>
+
+      </ion-slides>
+
+
 
 </ion-content>
