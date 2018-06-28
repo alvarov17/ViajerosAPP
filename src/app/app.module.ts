@@ -9,7 +9,6 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from "../pages/login/login";
 import { ModificarPerfilPage } from "../pages/modificar-perfil/modificar-perfil";
 import { RegistroPage } from "../pages/registro/registro";
-import { Registro2Page } from "../pages/registro2/registro2";
 import { FiltroServiciosPage } from "../pages/filtro-servicios/filtro-servicios";
 import { ServiciosAnfitrionPage } from "../pages/servicios-anfitrion/servicios-anfitrion";
 
@@ -32,7 +31,6 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     LoginPage,
     ModificarPerfilPage,
     RegistroPage,
-    Registro2Page,
     FiltroServiciosPage,
     ServiciosAnfitrionPage,
   ],
@@ -53,7 +51,6 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     LoginPage,
     ModificarPerfilPage,
     RegistroPage,
-    Registro2Page,
     FiltroServiciosPage,
     ServiciosAnfitrionPage
   ],

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Registro2Page } from "../registro2/registro2";
 
 /**
  * Generated class for the RegistroPage page.
@@ -23,8 +22,8 @@ export class RegistroPage {
     console.log('ionViewDidLoad RegistroPage');
   }
 
-  siguienteRegistro(){
-    this.navCtrl.push(Registro2Page);
+  Registrar(){
+    this.navCtrl.pop();
 
   }
 
