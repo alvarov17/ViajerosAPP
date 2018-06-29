@@ -11,6 +11,8 @@ import { ModificarPerfilPage } from "../pages/modificar-perfil/modificar-perfil"
 import { RegistroPage } from "../pages/registro/registro";
 import { FiltroServiciosPage } from "../pages/filtro-servicios/filtro-servicios";
 import { ServiciosAnfitrionPage } from "../pages/servicios-anfitrion/servicios-anfitrion";
+import { HistorialcomprasPage } from "../pages/historialcompras/historialcompras";
+import { MetodopagoPage } from "../pages/metodopago/metodopago";
 
 //googlemaps
 import { AgmCoreModule } from '@agm/core';
@@ -33,6 +35,8 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     RegistroPage,
     FiltroServiciosPage,
     ServiciosAnfitrionPage,
+    HistorialcomprasPage,
+    MetodopagoPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,9 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     ModificarPerfilPage,
     RegistroPage,
     FiltroServiciosPage,
-    ServiciosAnfitrionPage
+    ServiciosAnfitrionPage,
+    HistorialcomprasPage,
+    MetodopagoPage
   ],
   providers: [
     StatusBar,

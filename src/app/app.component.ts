@@ -7,6 +7,9 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from "../pages/login/login";
 import { FiltroServiciosPage } from "../pages/filtro-servicios/filtro-servicios";
 import { ServiciosAnfitrionPage } from "../pages/servicios-anfitrion/servicios-anfitrion";
+import { HistorialcomprasPage } from "../pages/historialcompras/historialcompras";
+import { MetodopagoPage } from "../pages/metodopago/metodopago";
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -15,7 +18,7 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 
-    this.rootPage = LoginPage;
+    this.rootPage = MetodopagoPage;
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
