@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from "../home/home";
 import { UsuarioProvider } from "../../providers/usuario/usuario";
-import { RegistroPage } from "../registro/registro";
+import { RegistroPage } from "../index.paginas";
 /**
  * Generated class for the LoginPage page.
  *

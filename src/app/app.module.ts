@@ -7,13 +7,9 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { LoginPage } from "../pages/login/login";
-import { ModificarPerfilPage } from "../pages/modificar-perfil/modificar-perfil";
-import { RegistroPage } from "../pages/registro/registro";
-import { Registro2Page } from "../pages/registro2/registro2";
-import { FiltroServiciosPage } from "../pages/filtro-servicios/filtro-servicios";
-import { ServiciosAnfitrionPage } from "../pages/servicios-anfitrion/servicios-anfitrion";
+
+//paginas
+import { HomePage, LoginPage, ModificarPerfilPage, RegistroPage, Registro2Page, FiltroServiciosPage, ServiciosAnfitrionPage} from "../pages/index.paginas";
 
 //googlemaps
 import { AgmCoreModule } from '@agm/core';
@@ -21,10 +17,6 @@ import { AgmCoreModule } from '@agm/core';
 //geolocalizacion
 import { Geolocation } from '@ionic-native/geolocation';
 
-//firebase
-import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { firebaseConfig } from "../conf/firebase.config";
 import { UsuarioProvider } from '../providers/usuario/usuario';
 
 @NgModule({
@@ -46,8 +38,6 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA-HXVa2jtkGfKtIJwisxgC46RaWqC1xuI'
     }),
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ModificarPerfilPage } from "../modificar-perfil/modificar-perfil";
+import { ModificarPerfilPage } from "../index.paginas";
 import { Geolocation } from '@ionic-native/geolocation';
 
 @Component({

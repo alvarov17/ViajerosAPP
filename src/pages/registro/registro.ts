@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Registro2Page } from "../registro2/registro2";
+import { Registro2Page } from "../index.paginas";
 
 /**
  * Generated class for the RegistroPage page.

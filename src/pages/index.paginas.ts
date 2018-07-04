@@ -5,3 +5,4 @@ export { RegistroPage } from "./registro/registro";
 export { Registro2Page } from "./registro2/registro2";
 export { SeleccionarServicioPage } from "./seleccionar-servicio/seleccionar-servicio";
 export { ServiciosAnfitrionPage } from "./servicios-anfitrion/servicios-anfitrion";
+export { HomePage } from "./home/home";
