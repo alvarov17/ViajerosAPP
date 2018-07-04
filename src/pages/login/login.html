@@ -1,24 +1,23 @@
 <ion-content padding>
 
   <ion-list>
-
-
       <h1 text-center>ViajerosAPP</h1>
 
-
     <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-label floating>Correo</ion-label>
+      <ion-input type="text" [(ngModel)]="correo"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Password</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
 
   </ion-list>
 
-  <button ion-button block (click)="ingresar()">Ingresar</button>
+  <button ion-button block
+          [disabled]="correo.length < 5 || password.length < 5"
+          (click)="ingresar()" >Ingresar</button>
 
   <p>o<p>
 

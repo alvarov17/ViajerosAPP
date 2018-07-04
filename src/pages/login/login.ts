@@ -17,16 +17,20 @@ import { RegistroPage } from "../registro/registro";
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public usuProv : UsuarioProvider) {
-  }
+  correo: string = "";
+  password: string = "";
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public usuProv : UsuarioProvider) {
   }
 
   ingresar(){
-    //this.usuProv.getUsuario();
-    this.navCtrl.setRoot(HomePage);
+
+    this.usuProv.validarUsuario(this.correo, this.password)
+                .subscribe( ()=>{} );
+
+    //this.navCtrl.setRoot(HomePage);
 
   }
 
