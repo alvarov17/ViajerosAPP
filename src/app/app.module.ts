@@ -22,6 +22,7 @@ import { AgmCoreModule } from '@agm/core';
 import { Geolocation } from '@ionic-native/geolocation';
 
 import { UsuarioProvider } from '../providers/usuario/usuario';
+import { ServicioProvider } from '../providers/servicio/servicio';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation,
-    UsuarioProvider
+    UsuarioProvider,
+    ServicioProvider
   ]
 })
 export class AppModule {}
