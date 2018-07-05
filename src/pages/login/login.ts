@@ -28,9 +28,8 @@ export class LoginPage {
   ingresar(){
 
     this.usuProv.validarUsuario(this.correo, this.password)
-                .subscribe( ()=>{} );
+                .subscribe( ()=> this.navCtrl.setRoot(HomePage) );
 
-    //this.navCtrl.setRoot(HomePage);
 
   }
 

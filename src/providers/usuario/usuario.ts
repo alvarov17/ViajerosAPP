@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { URL_SERVICIOS } from "../../conf/url.servicios";
 import { HttpClient } from "@angular/common/http";
-import { AlertController } from "ionic-angular";
+import { AlertController, NavController } from "ionic-angular";
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -33,7 +33,6 @@ export class UsuarioProvider {
 
       } else {
           this.id_usuario = data_resp['id_usuario'];
-
       }
     });
 

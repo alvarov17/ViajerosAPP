@@ -17,7 +17,10 @@
 <ion-content>
 
   <agm-map [latitude]="lat" [longitude]="lng" [zoom]="14">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+
+    <agm-marker [latitude]="lat" [longitude]="lng"
+                [iconUrl]="icon"
+                ></agm-marker>
   </agm-map>
 
 </ion-content>

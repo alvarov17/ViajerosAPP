@@ -12,6 +12,13 @@ export class HomePage {
   title: string = 'My first AGM project';
   lat: number;
   lng: number;
+  private icon: {
+    url: '../../assets/imgs/casaroja.png',
+    scaledSize: {
+      height: 40,
+      width: 20
+    }
+  };
 
   constructor(public navCtrl: NavController, private geolocation: Geolocation) {
 
