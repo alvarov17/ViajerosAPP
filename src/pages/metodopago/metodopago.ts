@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-
 /**
- * Generated class for the RegistroPage page.
+ * Generated class for the MetodopagoPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,21 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-registro',
-  templateUrl: 'registro.html',
+  selector: 'page-metodopago',
+  templateUrl: 'metodopago.html',
 })
-export class RegistroPage {
+export class MetodopagoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RegistroPage');
-  }
-
-  Registrar(){
-    this.navCtrl.pop();
-
+    console.log('ionViewDidLoad MetodopagoPage');
   }
 
 }

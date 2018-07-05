@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ModificarPerfilPage } from "../index.paginas";
 import { Geolocation } from '@ionic-native/geolocation';
+import { LoginPage } from "../../pages/login/login";
 
 @Component({
   selector: 'page-home',
@@ -38,6 +39,18 @@ export class HomePage {
     this.navCtrl.push(ModificarPerfilPage);
   }
 
+ Salir(){
 
+  this.navCtrl.setRoot(LoginPage);
+//  setTimeout(() => {
+
+//   this.navCtrl.setRoot(LoginPage);
+//   console.log("saliste ctm");
+
+// }, 2000);
+
+ //goToRoot
+
+ }
 
 }

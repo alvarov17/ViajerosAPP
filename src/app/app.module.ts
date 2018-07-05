@@ -9,7 +9,11 @@ import { HttpClientModule } from "@angular/common/http";
 import { MyApp } from './app.component';
 
 //paginas
-import { HomePage, LoginPage, ModificarPerfilPage, RegistroPage, Registro2Page, FiltroServiciosPage, ServiciosAnfitrionPage} from "../pages/index.paginas";
+import {  HomePage, LoginPage, ModificarPerfilPage, RegistroPage,
+          FiltroServiciosPage, ServiciosAnfitrionPage,
+          ContratarServicioPage, HistorialcomprasPage,
+          MetodopagoPage, ValorarAnfitrionPage } from "../pages/index.paginas";
+
 
 //googlemaps
 import { AgmCoreModule } from '@agm/core';
@@ -26,9 +30,12 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     LoginPage,
     ModificarPerfilPage,
     RegistroPage,
-    Registro2Page,
     FiltroServiciosPage,
     ServiciosAnfitrionPage,
+    HistorialcomprasPage,
+    MetodopagoPage,
+    ValorarAnfitrionPage,
+    ContratarServicioPage
   ],
   imports: [
     BrowserModule,
@@ -46,9 +53,12 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     LoginPage,
     ModificarPerfilPage,
     RegistroPage,
-    Registro2Page,
     FiltroServiciosPage,
-    ServiciosAnfitrionPage
+    ServiciosAnfitrionPage,
+    HistorialcomprasPage,
+    MetodopagoPage,
+    ValorarAnfitrionPage,
+    ContratarServicioPage
   ],
   providers: [
     StatusBar,

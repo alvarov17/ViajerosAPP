@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the Registro2Page page.
+ * Generated class for the HistorialcomprasPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-registro2',
-  templateUrl: 'registro2.html',
+  selector: 'page-historialcompras',
+  templateUrl: 'historialcompras.html',
 })
-export class Registro2Page {
+export class HistorialcomprasPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Registro2Page');
+    console.log('ionViewDidLoad HistorialcomprasPage');
   }
 
 }
