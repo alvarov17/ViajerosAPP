@@ -13,7 +13,8 @@ import { FiltroServiciosPage } from "../pages/filtro-servicios/filtro-servicios"
 import { ServiciosAnfitrionPage } from "../pages/servicios-anfitrion/servicios-anfitrion";
 import { HistorialcomprasPage } from "../pages/historialcompras/historialcompras";
 import { MetodopagoPage } from "../pages/metodopago/metodopago";
-
+import { ValorarAnfitrionPage } from "../pages/valorar-anfitrion/valorar-anfitrion";
+import { ContratarServicioPage } from "../pages/contratar-servicio/contratar-servicio";
 //googlemaps
 import { AgmCoreModule } from '@agm/core';
 
@@ -36,7 +37,9 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     FiltroServiciosPage,
     ServiciosAnfitrionPage,
     HistorialcomprasPage,
-    MetodopagoPage
+    MetodopagoPage,
+    ValorarAnfitrionPage,
+    ContratarServicioPage
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,9 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     FiltroServiciosPage,
     ServiciosAnfitrionPage,
     HistorialcomprasPage,
-    MetodopagoPage
+    MetodopagoPage,
+    ValorarAnfitrionPage,
+    ContratarServicioPage
   ],
   providers: [
     StatusBar,
