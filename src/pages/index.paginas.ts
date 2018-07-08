@@ -8,3 +8,7 @@ export { MetodopagoPage } from "./metodopago/metodopago";
 export { ValorarAnfitrionPage } from "./valorar-anfitrion/valorar-anfitrion";
 export { ContratarServicioPage } from "./contratar-servicio/contratar-servicio";
 export { HomePage } from "./home/home";
+export { VistaPrincipalAnfitrionPage } from "../pages/vista-principal-anfitrion/vista-principal-anfitrion";
+export { ModificarPerfilAnfitrionPage } from "../pages/modificar-perfil-anfitrion/modificar-perfil-anfitrion";
+export { PublicarAvisoAnfitrionPage } from "../pages/publicar-aviso-anfitrion/publicar-aviso-anfitrion";
+export { MenuDiarioAnfitrionPage } from "../pages/menu-diario-anfitrion/menu-diario-anfitrion";

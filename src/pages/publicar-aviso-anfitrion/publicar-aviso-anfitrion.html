@@ -1,0 +1,39 @@
+
+<ion-header>
+
+    <ion-navbar>
+      <ion-title> Este será tu nuevo aviso</ion-title>
+    </ion-navbar>
+
+  </ion-header>
+
+
+  <ion-content padding>
+
+      <ion-slides pager>
+
+          <ion-slide>
+              <ion-list>
+                  <h3> Título </h3>
+                    <ion-item>
+                      <ion-input type="text" placeholder="Ej: Los mejores servicios de la region...."></ion-input>
+                    </ion-item>
+                  </ion-list>
+                  <button (click)="GenerarMenu()">
+                      <img src="../../assets/imgs/plug.png">
+                 </button>
+          </ion-slide>
+
+          <ion-slide>
+              <h1> ¿ Qué servicios quieres ofrecer ?</h1>
+              <ion-list>
+
+                  <button ion-button block (click)="Registrar()">Siguiente</button>
+                  </ion-list>
+          </ion-slide>
+
+        </ion-slides>
+
+
+
+  </ion-content>

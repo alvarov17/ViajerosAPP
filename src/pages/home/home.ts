@@ -45,7 +45,7 @@ export class HomePage {
 //  setTimeout(() => {
 
 //   this.navCtrl.setRoot(LoginPage);
-//   console.log("saliste ctm");
+//   console.log("saliste");
 
 // }, 2000);
 
