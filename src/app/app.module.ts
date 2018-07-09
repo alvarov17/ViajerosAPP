@@ -12,7 +12,8 @@ import { MyApp } from './app.component';
 import {  HomePage, LoginPage, ModificarPerfilPage, RegistroPage,
           FiltroServiciosPage, ServiciosAnfitrionPage,
           ContratarServicioPage, HistorialcomprasPage,
-          MetodopagoPage, ValorarAnfitrionPage } from "../pages/index.paginas";
+          MetodopagoPage, ValorarAnfitrionPage, VistaPrincipalAnfitrionPage, ModificarPerfilAnfitrionPage
+        ,PublicarAvisoAnfitrionPage, MenuDiarioAnfitrionPage } from "../pages/index.paginas";
 
 
 //googlemaps
@@ -36,7 +37,11 @@ import { UsuarioProvider, ServicioProvider } from '../providers/index.providers'
     HistorialcomprasPage,
     MetodopagoPage,
     ValorarAnfitrionPage,
-    ContratarServicioPage
+    ContratarServicioPage,
+    VistaPrincipalAnfitrionPage,
+    ModificarPerfilAnfitrionPage,
+    PublicarAvisoAnfitrionPage,
+    MenuDiarioAnfitrionPage
   ],
   imports: [
     BrowserModule,
@@ -59,7 +64,12 @@ import { UsuarioProvider, ServicioProvider } from '../providers/index.providers'
     HistorialcomprasPage,
     MetodopagoPage,
     ValorarAnfitrionPage,
-    ContratarServicioPage
+    ContratarServicioPage,
+    VistaPrincipalAnfitrionPage,
+    ModificarPerfilAnfitrionPage,
+    PublicarAvisoAnfitrionPage,
+    MenuDiarioAnfitrionPage
+
   ],
   providers: [
     StatusBar,

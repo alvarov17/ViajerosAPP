@@ -1,0 +1,78 @@
+
+<ion-header>
+
+  <ion-toolbar>
+
+    <ion-buttons>
+      <button ion-button icon-only menuToggle><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="ModificarPerfilAnfitrion()"><ion-icon name="settings"></ion-icon></button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+
+
+</ion-header>
+<ion-grid>
+  <ion-row>
+    <ion-col col-12>
+        .
+    </ion-col>
+    <ion-col col-12>
+        .
+    </ion-col>
+      <ion-col>
+        <img class="perfil" src="../../assets/imgs/avatar-icon.png" width="20%">
+      </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col col-12>
+        <ion-item class="item-text-wrap">
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+<ion-menu [content]="mycontent">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col><img src="../../assets/imgs/avatar-icon.png" width="70px" icon-left=""></ion-col>
+          <ion-col><h3>Alvaro Valenzuela</h3></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item>
+        Historial de compras
+      </button>
+      <button ion-item>
+        Opciones de pago
+      </button>
+      <button ion-item>
+        Compartir
+      </button>
+      <button ion-item>
+        Ayuda
+      </button>
+       <!--<button ion-item (click)="Salir()">SALIR</button>-->
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-footer>
+    <ion-row>
+        <ion-col>
+            <button ion-button (click)="PublicarAviso()" >Publicar Aviso</button>
+
+        </ion-col>
+      </ion-row>
+  </ion-footer>
+
+<!--<i  on-nav #mycontent1 [root]="rootPage"></ion-nav>-->

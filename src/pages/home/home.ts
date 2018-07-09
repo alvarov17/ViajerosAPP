@@ -41,7 +41,9 @@ export class HomePage {
 
   Salir() {
 
-    this.navCtrl.setRoot(LoginPage);
+  this.navCtrl.setRoot(LoginPage);
+  console.log("saliste");
+
 
   }
 
