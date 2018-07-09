@@ -21,8 +21,8 @@ import { AgmCoreModule } from '@agm/core';
 //geolocalizacion
 import { Geolocation } from '@ionic-native/geolocation';
 
-import { UsuarioProvider } from '../providers/usuario/usuario';
-import { ServicioProvider } from '../providers/servicio/servicio';
+//providers
+import { UsuarioProvider, ServicioProvider } from '../providers/index.providers';
 
 @NgModule({
   declarations: [

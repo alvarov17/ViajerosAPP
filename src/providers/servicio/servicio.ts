@@ -1,17 +1,27 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {Servicio} from "../../interfaces/servicio.interfaz";
 
-/*
-  Generated class for the ServicioProvider provider.
+import {URL_SERVICIOS} from "../../conf/url.servicios";
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class ServicioProvider {
 
+  public servicios: Servicio[] = [];
+
   constructor(public http: HttpClient) {
-    console.log('Hello ServicioProvider Provider');
+    this.mostrarServicio();
+  }
+
+  mostrarServicio() {
+
+    let url = URL_SERVICIOS + "servicio/obtenerservicio";
+
+    this.http.get(url).map(response => {
+
+    });
+
+
   }
 
 }

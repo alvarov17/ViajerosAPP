@@ -1,13 +1,16 @@
-
 <ion-header>
 
   <ion-toolbar>
 
     <ion-buttons>
-      <button ion-button icon-only menuToggle><ion-icon name="menu"></ion-icon></button>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
     </ion-buttons>
     <ion-buttons end>
-      <button ion-button icon-only (click)="abrirModificarPerfil()"><ion-icon name="settings"></ion-icon></button>
+      <button ion-button icon-only (click)="abrirModificarPerfil()">
+        <ion-icon name="settings"></ion-icon>
+      </button>
     </ion-buttons>
 
   </ion-toolbar>
@@ -17,10 +20,8 @@
 <ion-content>
 
   <agm-map [latitude]="lat" [longitude]="lng" [zoom]="14">
-
-    <agm-marker [latitude]="lat" [longitude]="lng"
-                [iconUrl]="icon"
-                ></agm-marker>
+    <agm-marker *ngFor="let ser of ServCtrl.servicios;" [latitude]="" [longitude]="">
+    </agm-marker>
   </agm-map>
 
 </ion-content>
@@ -53,7 +54,7 @@
       <button ion-item>
         Ayuda
       </button>
-       <button ion-item (click)="Salir()">SALIR</button>
+      <button ion-item (click)="Salir()">SALIR</button>
     </ion-list>
   </ion-content>
 </ion-menu>

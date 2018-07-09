@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { ModificarPerfilPage } from "../index.paginas";
-import { Geolocation } from '@ionic-native/geolocation';
-import { LoginPage } from "../../pages/login/login";
+import {Component} from '@angular/core';
+import {NavController} from 'ionic-angular';
+import {ModificarPerfilPage} from "../index.paginas";
+import {Geolocation} from '@ionic-native/geolocation';
+import {LoginPage} from "../../pages/login/login";
+import {ServicioProvider} from "../../providers/index.providers"
 
 @Component({
   selector: 'page-home',
@@ -13,44 +14,36 @@ export class HomePage {
   title: string = 'My first AGM project';
   lat: number;
   lng: number;
-  private icon: {
-    url: '../../assets/imgs/casaroja.png',
-    scaledSize: {
-      height: 40,
-      width: 20
-    }
-  };
 
-  constructor(public navCtrl: NavController, private geolocation: Geolocation) {
+  constructor(public navCtrl: NavController, private geolocation: Geolocation,
+              public ServCtrl: ServicioProvider) {
+
 
   }
 
-  ionViewDidEnter(){
+  ionViewDidEnter() {
+
     this.geolocation.getCurrentPosition().then((resp) => {
       this.lat = resp.coords.latitude;
       this.lng = resp.coords.longitude;
       console.log(`latitud: ${this.lat} - longitud: ${this.lng}`);
+      this.ServCtrl.servicios.forEach(value => {
+        console.log();
+      });
     }).catch((error) => {
       console.log('Error getting location', error);
     });
   }
 
-  abrirModificarPerfil(){
+  abrirModificarPerfil() {
     this.navCtrl.push(ModificarPerfilPage);
   }
 
- Salir(){
+  Salir() {
 
-  this.navCtrl.setRoot(LoginPage);
-//  setTimeout(() => {
+    this.navCtrl.setRoot(LoginPage);
 
-//   this.navCtrl.setRoot(LoginPage);
-//   console.log("saliste ctm");
+  }
 
-// }, 2000);
-
- //goToRoot
-
- }
 
 }
