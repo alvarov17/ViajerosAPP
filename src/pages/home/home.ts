@@ -1,10 +1,8 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {
-  ContratarServicioPage,
   HistorialcomprasPage,
-  ModificarPerfilPage,
-  ServiciosAnfitrionPage
+  ModificarPerfilPage
 } from "../index.paginas";
 import {Geolocation} from '@ionic-native/geolocation';
 import {LoginPage} from "../../pages/login/login";

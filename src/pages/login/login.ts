@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from "../home/home";
-import { UsuarioProvider } from "../../providers/usuario/usuario";
-import { RegistroPage } from "../index.paginas";
+import { ClienteProvider } from "../../providers/index.providers";
+import {LoginAnfitrionPage, RegistroPage} from "../index.paginas";
 /**
  * Generated class for the LoginPage page.
  *
@@ -17,17 +17,17 @@ import { RegistroPage } from "../index.paginas";
 })
 export class LoginPage {
 
-  correo: string = "";
+  email: string = "";
   password: string = "";
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              public usuProv : UsuarioProvider) {
+              public CliProv : ClienteProvider) {
   }
 
   ingresar(){
 
-    this.usuProv.validarUsuario(this.correo, this.password)
+    this.CliProv.validarCliente(this.email, this.password)
                 .subscribe( ()=> this.navCtrl.setRoot(HomePage) );
 
 
@@ -36,6 +36,9 @@ export class LoginPage {
   abrirRegistro(){
 
     this.navCtrl.push(RegistroPage);
+  }
+  irLoginAnfitrion(){
+    this.navCtrl.setRoot(LoginAnfitrionPage);
   }
 
 }

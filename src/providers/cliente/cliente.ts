@@ -5,7 +5,7 @@ import {AlertController, NavController} from "ionic-angular";
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class UsuarioProvider {
+export class ClienteProvider {
 
   id_usuario: string;
 
@@ -16,11 +16,11 @@ export class UsuarioProvider {
 
   }
 
-  validarUsuario(correo: string, password: string) {
+  validarCliente(email: string, password: string) {
 
-    let url = URL_SERVICIOS + "usuario/validarusuario";
+    let url = URL_SERVICIOS + "cliente/login";
 
-    return this.http.post(url, {correo, password}).map(resp => {
+    return this.http.post(url, {email, password}).map(resp => {
       let data_resp = resp;
       console.log(data_resp);
 
@@ -32,7 +32,7 @@ export class UsuarioProvider {
         }).present();
 
       } else {
-        this.id_usuario = data_resp['id_usuario'];
+        this.id_usuario = data_resp['mensaje']['cli_id'];
       }
     });
 

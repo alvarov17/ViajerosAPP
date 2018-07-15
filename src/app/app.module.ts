@@ -11,10 +11,9 @@ import {MyApp} from './app.component';
 //paginas
 import {
   HomePage, LoginPage, ModificarPerfilPage, RegistroPage,
-  FiltroServiciosPage, ServiciosAnfitrionPage,
-  ContratarServicioPage, HistorialcomprasPage,
+  FiltroServiciosPage, ServiciosAnfitrionPage, HistorialcomprasPage,
   MetodopagoPage, ValorarAnfitrionPage, VistaPrincipalAnfitrionPage, ModificarPerfilAnfitrionPage
-  , PublicarAvisoAnfitrionPage, MenuDiarioAnfitrionPage, ServiciosPage
+  , PublicarAvisoAnfitrionPage, MenuDiarioAnfitrionPage, ServiciosPage, LoginAnfitrionPage
 } from "../pages/index.paginas";
 
 //pipes
@@ -27,7 +26,7 @@ import {AgmCoreModule} from '@agm/core';
 import {Geolocation} from '@ionic-native/geolocation';
 
 //providers
-import {UsuarioProvider, AvisoProvider, ServicioProvider} from '../providers/index.providers';
+import {ClienteProvider, AvisoProvider, ServicioProvider, AnfitrionProvider} from '../providers/index.providers';
 
 @NgModule({
   declarations: [
@@ -41,12 +40,12 @@ import {UsuarioProvider, AvisoProvider, ServicioProvider} from '../providers/ind
     HistorialcomprasPage,
     MetodopagoPage,
     ValorarAnfitrionPage,
-    ContratarServicioPage,
     VistaPrincipalAnfitrionPage,
     ModificarPerfilAnfitrionPage,
     PublicarAvisoAnfitrionPage,
     MenuDiarioAnfitrionPage,
-    ServiciosPage
+    ServiciosPage,
+    LoginAnfitrionPage
   ],
   imports: [
     BrowserModule,
@@ -70,12 +69,12 @@ import {UsuarioProvider, AvisoProvider, ServicioProvider} from '../providers/ind
     HistorialcomprasPage,
     MetodopagoPage,
     ValorarAnfitrionPage,
-    ContratarServicioPage,
     VistaPrincipalAnfitrionPage,
     ModificarPerfilAnfitrionPage,
     PublicarAvisoAnfitrionPage,
     MenuDiarioAnfitrionPage,
-    ServiciosPage
+    ServiciosPage,
+    LoginAnfitrionPage
 
   ],
   providers: [
@@ -83,9 +82,10 @@ import {UsuarioProvider, AvisoProvider, ServicioProvider} from '../providers/ind
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation,
-    UsuarioProvider,
+    ClienteProvider,
     AvisoProvider,
-    ServicioProvider
+    ServicioProvider,
+    AnfitrionProvider
   ]
 })
 export class AppModule {

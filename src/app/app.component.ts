@@ -4,7 +4,7 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
 
-import {HomePage, ServiciosPage} from "../pages/index.paginas";
+import {HomePage, LoginPage, ServiciosPage} from "../pages/index.paginas";
 
 
 @Component({
@@ -15,7 +15,7 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 
-    this.rootPage = HomePage;
+    this.rootPage = LoginPage;
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
