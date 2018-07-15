@@ -19,8 +19,9 @@
 
 <ion-content>
 
-  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="14">
-    <agm-marker *ngFor="let ser of ServCtrl.servicios;" [latitude]="" [longitude]="">
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="10">
+    <agm-marker *ngFor="let avi of AviCtrl.avisos" [latitude]="avi.avi_lat | number"
+                [longitude]="avi.avi_lng | number" (markerClick)="mostrarServicio(avi)">
     </agm-marker>
   </agm-map>
 
@@ -42,7 +43,7 @@
 
   <ion-content>
     <ion-list>
-      <button ion-item>
+      <button ion-item (click)="mostrarHistorial()">
         Historial de compras
       </button>
       <button ion-item>

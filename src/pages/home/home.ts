@@ -1,9 +1,16 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {ModificarPerfilPage} from "../index.paginas";
+import {
+  ContratarServicioPage,
+  HistorialcomprasPage,
+  ModificarPerfilPage,
+  ServiciosAnfitrionPage
+} from "../index.paginas";
 import {Geolocation} from '@ionic-native/geolocation';
 import {LoginPage} from "../../pages/login/login";
-import {ServicioProvider} from "../../providers/index.providers"
+import {AvisoProvider} from "../../providers/index.providers"
+import {Aviso} from "../../interfaces/aviso.interface";
+import {ServiciosPage} from "../servicios/servicios";
 
 @Component({
   selector: 'page-home',
@@ -16,7 +23,7 @@ export class HomePage {
   lng: number;
 
   constructor(public navCtrl: NavController, private geolocation: Geolocation,
-              public ServCtrl: ServicioProvider) {
+              public AviCtrl: AvisoProvider) {
 
 
   }
@@ -27,9 +34,6 @@ export class HomePage {
       this.lat = resp.coords.latitude;
       this.lng = resp.coords.longitude;
       console.log(`latitud: ${this.lat} - longitud: ${this.lng}`);
-      this.ServCtrl.servicios.forEach(value => {
-        console.log();
-      });
     }).catch((error) => {
       console.log('Error getting location', error);
     });
@@ -41,10 +45,17 @@ export class HomePage {
 
   Salir() {
 
-  this.navCtrl.setRoot(LoginPage);
-  console.log("saliste");
+    this.navCtrl.setRoot(LoginPage);
+    console.log("saliste");
 
+  }
 
+  mostrarHistorial() {
+    this.navCtrl.push(HistorialcomprasPage);
+  }
+
+  mostrarServicio(aviso: Aviso) {
+    this.navCtrl.push(ServiciosPage, {"aviso": aviso});
   }
 
 

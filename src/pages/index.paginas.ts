@@ -12,3 +12,4 @@ export { VistaPrincipalAnfitrionPage } from "../pages/vista-principal-anfitrion/
 export { ModificarPerfilAnfitrionPage } from "../pages/modificar-perfil-anfitrion/modificar-perfil-anfitrion";
 export { PublicarAvisoAnfitrionPage } from "../pages/publicar-aviso-anfitrion/publicar-aviso-anfitrion";
 export { MenuDiarioAnfitrionPage } from "../pages/menu-diario-anfitrion/menu-diario-anfitrion";
+export { ServiciosPage } from "./servicios/servicios";

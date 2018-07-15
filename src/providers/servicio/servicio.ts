@@ -1,27 +1,25 @@
-import {HttpClient} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {Servicio} from "../../interfaces/servicio.interfaz";
-
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Servicio, RootObject } from "../../interfaces/servicio.interface";
 import {URL_SERVICIOS} from "../../conf/url.servicios";
+
 
 @Injectable()
 export class ServicioProvider {
 
-  public servicios: Servicio[] = [];
 
   constructor(public http: HttpClient) {
-    this.mostrarServicio();
+    console.log('Hello ServicioProvider Provider');
   }
 
-  mostrarServicio() {
-
-    let url = URL_SERVICIOS + "servicio/obtenerservicio";
-
-    this.http.get(url).map(response => {
-
-    });
-
-
+  public mostrarServicios(id: any){
+    let url = URL_SERVICIOS + "servicio/obtener/"+id;
+    return this.http.get<RootObject>(url)
+      .subscribe(value => {
+        console.log(value);
+      });
   }
+
+
 
 }
