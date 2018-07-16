@@ -13,7 +13,7 @@ import {
   HomePage, LoginPage, ModificarPerfilPage, RegistroPage,
   FiltroServiciosPage, ServiciosAnfitrionPage, HistorialcomprasPage,
   MetodopagoPage, ValorarAnfitrionPage, VistaPrincipalAnfitrionPage, ModificarPerfilAnfitrionPage
-  , PublicarAvisoAnfitrionPage, MenuDiarioAnfitrionPage, ServiciosPage, LoginAnfitrionPage
+  , PublicarAvisoAnfitrionPage, MenuDiarioAnfitrionPage, ServiciosPage, LoginAnfitrionPage, HomeAnfitrionPage
 } from "../pages/index.paginas";
 
 //pipes
@@ -45,7 +45,8 @@ import {ClienteProvider, AvisoProvider, ServicioProvider, AnfitrionProvider} fro
     PublicarAvisoAnfitrionPage,
     MenuDiarioAnfitrionPage,
     ServiciosPage,
-    LoginAnfitrionPage
+    LoginAnfitrionPage,
+    HomeAnfitrionPage
   ],
   imports: [
     BrowserModule,
@@ -74,7 +75,8 @@ import {ClienteProvider, AvisoProvider, ServicioProvider, AnfitrionProvider} fro
     PublicarAvisoAnfitrionPage,
     MenuDiarioAnfitrionPage,
     ServiciosPage,
-    LoginAnfitrionPage
+    LoginAnfitrionPage,
+    HomeAnfitrionPage
 
   ],
   providers: [

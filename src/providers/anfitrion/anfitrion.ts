@@ -12,7 +12,7 @@ import {URL_SERVICIOS} from "../../conf/url.servicios";
 @Injectable()
 export class AnfitrionProvider {
 
-  Anf: Anfitrion;
+  anf: Anfitrion;
 
   constructor(public http: HttpClient) {
     console.log('Hello AnfitrionProvider Provider');
@@ -20,10 +20,12 @@ export class AnfitrionProvider {
 
   validarAnfitrion(email: string, password: string) {
     let url = URL_SERVICIOS + "anfitrion/login";
-    return this.http.post<RootObject>(url, {email,password})
-      .subscribe(value => {
-        this.Anf = value['anfitrion'];
-      });
-  }
+    return this.http.post<RootObject>(url, {email, password}).map(value => {
 
+      if(value.error){
+      }else {
+        this.anf = value.anfitrion;
+      }
+    })
+  }
 }

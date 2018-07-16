@@ -1,6 +1,6 @@
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
-import {RootObject, Aviso} from "../../interfaces/aviso.interface";
+import {RootObject, Aviso, RootObjectAnf, AvisoAnf} from "../../interfaces/aviso.interface";
 
 import {URL_SERVICIOS} from "../../conf/url.servicios";
 
@@ -8,20 +8,34 @@ import {URL_SERVICIOS} from "../../conf/url.servicios";
 export class AvisoProvider {
 
   public avisos: Aviso[] = [];
+  public avisoAnf = {} as AvisoAnf;
 
   constructor(public http: HttpClient) {
-    this.mostrarAviso();
+
   }
 
   mostrarAviso() {
 
-    let url = URL_SERVICIOS + "aviso/obtener";
+    let url = URL_SERVICIOS + "aviso/obtenertodos";
 
     this.http.get<RootObject>(url)
       .subscribe(value => {
-        console.log(value)
-        this.avisos = value.avisos
+        console.log(value);
+        this.avisos = value.avisos;
       })
+  }
+
+  mostrarAvisosActivos(id: any) {
+
+    let url = URL_SERVICIOS + "aviso/publicados/" + id;
+
+    return this.http.get<RootObjectAnf>(url)
+      .subscribe(data => {
+        this.avisoAnf = data.aviso;
+        console.log(this.avisoAnf);
+      });
+    ;
+
   }
 
 }

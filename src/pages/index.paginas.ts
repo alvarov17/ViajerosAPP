@@ -13,3 +13,4 @@ export {PublicarAvisoAnfitrionPage} from "../pages/publicar-aviso-anfitrion/publ
 export {MenuDiarioAnfitrionPage} from "../pages/menu-diario-anfitrion/menu-diario-anfitrion";
 export {ServiciosPage} from "./servicios/servicios";
 export {LoginAnfitrionPage} from "./login-anfitrion/login-anfitrion";
+export {HomeAnfitrionPage} from "./home-anfitrion/home-anfitrion";

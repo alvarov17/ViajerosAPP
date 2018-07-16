@@ -22,6 +22,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, private geolocation: Geolocation,
               public AviCtrl: AvisoProvider) {
+    AviCtrl.mostrarAviso();
 
 
   }
