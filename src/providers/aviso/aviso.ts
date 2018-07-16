@@ -9,6 +9,7 @@ export class AvisoProvider {
 
   public avisos: Aviso[] = [];
   public avisoAnf = {} as AvisoAnf;
+  public error: boolean;
 
   constructor(public http: HttpClient) {
 
@@ -32,7 +33,9 @@ export class AvisoProvider {
     return this.http.get<RootObjectAnf>(url)
       .subscribe(data => {
         this.avisoAnf = data.aviso;
-        console.log(this.avisoAnf);
+        this.error = data.error;
+        console.log(data.aviso);
+        console.log(data.error)
       });
     ;
 

@@ -25,6 +25,9 @@ import {AgmCoreModule} from '@agm/core';
 //geolocalizacion
 import {Geolocation} from '@ionic-native/geolocation';
 
+//geocoder
+import {NativeGeocoder} from "@ionic-native/native-geocoder";
+
 //providers
 import {ClienteProvider, AvisoProvider, ServicioProvider, AnfitrionProvider} from '../providers/index.providers';
 
@@ -87,7 +90,8 @@ import {ClienteProvider, AvisoProvider, ServicioProvider, AnfitrionProvider} fro
     ClienteProvider,
     AvisoProvider,
     ServicioProvider,
-    AnfitrionProvider
+    AnfitrionProvider,
+    NativeGeocoder
   ]
 })
 export class AppModule {

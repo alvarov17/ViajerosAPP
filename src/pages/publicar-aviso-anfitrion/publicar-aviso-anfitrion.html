@@ -1,58 +1,66 @@
-
 <ion-header>
 
-    <ion-navbar>
-      <ion-title> Este será tu nuevo aviso</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title> Este será tu nuevo aviso</ion-title>
+  </ion-navbar>
 
-  </ion-header>
-
-
-  <ion-content padding>
-
-      <ion-slides pager>
-
-          <ion-slide>
-              <ion-list>
-                  <h3> Título </h3>
-                    <ion-item>
-                      <ion-input type="text" placeholder="Ej: Los mejores servicios de la region...."></ion-input>
-                    </ion-item>
-                  </ion-list>
-
-          </ion-slide>
-
-          <ion-slide>
-              <h1> ¿ Qué servicios quieres ofrecer ?</h1>
-              <ion-list>
-<ion-grid>
-  <ion-row>
-    <ion-col offset-2 col-3>
-      <img src="../../assets//imgs/wc.png" >
-
-    </ion-col>
-    <ion-col offset-2 col-3>
-        <button  (click)="GenerarMenu()">
-            <img src="../../assets//imgs/dish.png" >
-       </button>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-      <ion-col offset-2 col-3>
-        <img src="../../assets//imgs/plug.png" >
-
-      </ion-col>
-      <ion-col offset-2 col-3>
-          <img src="../../assets//imgs/wifi.png" >
-      </ion-col>
-    </ion-row>
-</ion-grid>
-                  <button ion-button block (click)="Registrar()">Siguiente</button>
-                  </ion-list>
-          </ion-slide>
-
-        </ion-slides>
+</ion-header>
 
 
+<ion-content padding>
 
-  </ion-content>
+  <ion-slides pager>
+
+    <ion-slide>
+      <ion-list>
+        <h3> Título </h3>
+        <ion-item>
+          <ion-input type="text" placeholder="Ej: Los mejores servicios de la region...."></ion-input>
+        </ion-item>
+      </ion-list>
+      <button ion-button
+              (click)="avanzarSlide()">Siguiente
+      </button>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-list>
+        <h3> Dirección </h3>
+        <ion-item>
+          <ion-input type="text" placeholder="Ej: Av las condes"></ion-input>
+        </ion-item>
+      </ion-list>
+      <button ion-button
+              (click)="avanzarSlide()">Siguiente
+      </button>
+
+    </ion-slide>
+
+    <ion-slide>
+      <h1> ¿ Qué servicios quieres ofrecer ?</h1>
+      <ion-list>
+        <ion-item>
+          <ion-label>Alimentación</ion-label>
+          <ion-checkbox></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Baño</ion-label>
+          <ion-checkbox></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Wifi</ion-label>
+          <ion-checkbox></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Electricidad</ion-label>
+          <ion-checkbox></ion-checkbox>
+        </ion-item>
+        <button ion-button block (click)="Registrar()">Siguiente</button>
+      </ion-list>
+    </ion-slide>
+
+  </ion-slides>
+
+
+</ion-content>

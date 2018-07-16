@@ -17,7 +17,7 @@
 
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="!aviProv.error">
   <ion-card>
 
     <ion-card-header>
@@ -29,6 +29,18 @@
     </ion-card-content>
 
   </ion-card>
+
+</ion-content>
+
+<ion-content *ngIf="aviProv.error">
+
+  <h1>{{aviProv.avisoAnf}}</h1>
+
+
+  <button ion-button icon-only menuToggle block (click)="publicarAviso()">
+    Publicar aviso
+  </button>
+
 
 </ion-content>
 
