@@ -5,6 +5,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {StatusBar} from '@ionic-native/status-bar';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {Keyboard} from "@ionic-native/keyboard";
 
 import {MyApp} from './app.component';
 
@@ -29,7 +30,7 @@ import {Geolocation} from '@ionic-native/geolocation';
 import {NativeGeocoder} from "@ionic-native/native-geocoder";
 
 //providers
-import {ClienteProvider, AvisoProvider, ServicioProvider, AnfitrionProvider} from '../providers/index.providers';
+import {ClienteProvider, AvisoProvider, ServicioProvider, AnfitrionProvider, GeocoderProvider} from '../providers/index.providers';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,7 @@ import {ClienteProvider, AvisoProvider, ServicioProvider, AnfitrionProvider} fro
     PipesModule,
     HttpClientModule,
     FormsModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{scrollAssist: false, autoFocusAssist: false}),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA-HXVa2jtkGfKtIJwisxgC46RaWqC1xuI'
     }),
@@ -91,7 +92,9 @@ import {ClienteProvider, AvisoProvider, ServicioProvider, AnfitrionProvider} fro
     AvisoProvider,
     ServicioProvider,
     AnfitrionProvider,
-    NativeGeocoder
+    NativeGeocoder,
+    GeocoderProvider,
+    Keyboard
   ]
 })
 export class AppModule {

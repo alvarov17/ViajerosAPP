@@ -15,7 +15,10 @@
       <ion-list>
         <h3> Título </h3>
         <ion-item>
-          <ion-input type="text" placeholder="Ej: Los mejores servicios de la region...."></ion-input>
+          <ion-input fixed
+                     type="text"
+                     placeholder="Ej: Los mejores servicios de la region...."
+                     [(ngModel)]="aviso.avi_titulo"></ion-input>
         </ion-item>
       </ion-list>
       <button ion-button
@@ -28,11 +31,14 @@
       <ion-list>
         <h3> Dirección </h3>
         <ion-item>
-          <ion-input type="text" placeholder="Ej: Av las condes"></ion-input>
+          <ion-input fixed
+                     type="text"
+                     placeholder="Ej: Av las condes"
+                     [(ngModel)]="direccion"></ion-input>
         </ion-item>
       </ion-list>
       <button ion-button
-              (click)="avanzarSlide()">Siguiente
+              (click)="ingresarDireccion(direccion)">Siguiente
       </button>
 
     </ion-slide>
